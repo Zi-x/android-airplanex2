@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RadioGroup
+        android:id="@+id/radioG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rotation="270"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.88"
+        app:layout_constraintStart_toEndOf="@+id/button_connect"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <RadioButton
+            android:id="@+id/radioButton1"
+            android:layout_width="75dp"
+            android:layout_height="38dp"
+            android:padding="1dp"
+            android:rotation="0"
+            android:rotationY="0"
+            android:scrollbarSize="1dp"
+            android:text="自稳"
+            android:textColor="#4CAF50"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="75dp"
+            android:layout_height="38dp"
+            android:text="迫降"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="75dp"
+            android:layout_height="38dp"
+            android:text="定点"
+            android:textSize="16sp" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/button_connect"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:text="连接"
+        android:textColor="@color/design_default_color_surface"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline" />
+
+    <Button
+        android:id="@+id/button_disconnect"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:text="断开"
+        android:textColor="@color/design_default_color_surface"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_connect" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.21" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.31" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.27" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.88" />
+
+    <TextView
+        android:id="@+id/text_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="芜湖起飞"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_connect"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.98" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.02" />
+
+    <com.example.airplanex2.RockerView
+        android:id="@+id/rockerView_left"
+        android:layout_width="293dp"
+        android:layout_height="243dp"
+        app:areaBackground="@drawable/y1"
+        app:layout_constraintBottom_toTopOf="@+id/guideline7"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="@+id/guideline6"
+        app:layout_constraintTop_toTopOf="@+id/guideline8"
+        app:rockerBackground="#017CED"
+        app:rockerRadius="25dp"
+        app:rockerReturnMode="false" />
+    <!-- app:areaBackground="@drawable/m2_snow" -->
+    <com.example.airplanex2.RockerView
+        android:id="@+id/rockerView_right"
+        android:layout_width="293dp"
+        android:layout_height="243dp"
+        app:areaBackground="@drawable/m1_black"
+        app:layout_constraintBottom_toTopOf="@+id/guideline7"
+        app:layout_constraintEnd_toStartOf="@+id/guideline5"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintStart_toStartOf="@id/guideline4"
+        app:layout_constraintTop_toTopOf="@+id/guideline8"
+        app:rockerBackground="@color/pink_700"
+        app:rockerRadius="25dp" />
+
+    <TextView
+        android:id="@+id/LogLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="多旋翼控制"
+        android:textColor="#009688"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toEndOf="@+id/rockerView_left"
+        app:layout_constraintStart_toStartOf="@+id/rockerView_left"
+        app:layout_constraintTop_toTopOf="@+id/guideline" />
+
+    <TextView
+        android:id="@+id/LogRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="多旋翼控制"
+        android:textColor="#009688"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toEndOf="@+id/rockerView_right"
+        app:layout_constraintStart_toStartOf="@+id/rockerView_right"
+        app:layout_constraintTop_toTopOf="@+id/guideline" />
+
+    <TextView
+        android:id="@+id/textRssi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="WiFi"
+        android:textColor="@android:color/holo_green_light"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline7"
+        app:layout_constraintEnd_toStartOf="@+id/rockerView_right"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toEndOf="@+id/rockerView_left"
+        app:layout_constraintTop_toTopOf="@+id/guideline8"
+        app:layout_constraintVertical_bias="0.277" />
+
+    <TextView
+        android:id="@+id/textView_"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="📶信号强度"
+        android:textColor="#E91E63"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/textRssi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline3"
+        app:layout_constraintVertical_bias="0.384" />
+
+    <SeekBar
+        android:id="@+id/seekBar1"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:rotation="90"
+        app:layout_constraintBottom_toTopOf="@+id/guideline7"
+        app:layout_constraintEnd_toStartOf="@+id/guideline6"
+        app:layout_constraintStart_toStartOf="@+id/guideline6"
+        app:layout_constraintTop_toTopOf="@+id/guideline8" />
+
+    <SeekBar
+        android:id="@+id/seekBar2"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:rotation="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/rockerView_right"
+        app:layout_constraintStart_toStartOf="@+id/rockerView_right"
+        app:layout_constraintTop_toTopOf="@+id/guideline7" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
